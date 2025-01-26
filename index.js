@@ -34,7 +34,7 @@ window.addEventListener('load', () => {
     anime({
         targets: '.loader',
         opacity: [1, 0],
-        duration: 500,
+        duration: 800,
         delay: 800,
         easing: 'easeInOutExpo',
         complete: () => {
