@@ -12,7 +12,19 @@ document.addEventListener('touchstart', (e) => {
 });
 
 
+// Функция для генерации случайного числа от min до max
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
+// Получаем все элементы players-amount
+const playersAmountElements = document.querySelectorAll('.players-amount');
+
+// Устанавливаем случайное число для каждого элемента
+playersAmountElements.forEach((element) => {
+    const randomNumber = getRandomInt(5, 10); // Генерируем случайное число от 5 до 10
+    element.textContent = randomNumber; // Устанавливаем текст элемента
+});
 
 
 
