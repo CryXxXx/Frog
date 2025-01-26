@@ -112,12 +112,14 @@ body {
     position: relative;
     aspect-ratio: 1 / 1;
     width: 100%;
+    scale: 0.5;
 }
 
 .slot-logo {
     position: relative;
     aspect-ratio: 25 / 27;
     width: 100%;
+    scale: 0.5;
 }
 
 
