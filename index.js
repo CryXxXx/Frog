@@ -264,9 +264,9 @@ function place_coef() {
     
     fetch("https://23s5px-176-118-32-227.ru.tuna.am/get_last_game", {
         method: 'GET', // Указываем метод GET
-        headers: {
-            'Content-Type': 'application/json' // Указываем тип контента (необязательно для GET-запроса)
-        },
+       headers: {
+        'Accept': 'application/json' // Указывает, что ожидаете получить JSON в ответе
+    },
     })
     .then(response => {
         if (!response.ok) {
