@@ -47,7 +47,7 @@ window.addEventListener('load', () => {
         targets: '.loader',
         opacity: [1, 0],
         duration: 800,
-        delay: 800,
+        delay: 1000,
         easing: 'easeInOutExpo',
         complete: () => {
           loader.classList.add('off');
