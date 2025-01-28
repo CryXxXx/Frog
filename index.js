@@ -247,12 +247,11 @@ ref.addEventListener('click', () => {
 window.addEventListener('load', when_page_start());
 function when_page_start() {
     place_coef();
-    place_init_user_info(); // Вызываем функцию сразу после загрузки страницы
-    // Запускаем функцию info для получения обновленных данных
+    //place_init_user_info();
     setInterval(() => {
-        const tg_id = window.Telegram.WebApp.WebappInitData.user.id; // Получаем tg_id
-        info(tg_id); // Передаем tg_id в функцию info
-    }, 10000); // Обновляем данные каждые 10 секунд
+        const tg_id = window.Telegram.WebApp.WebappInitData.user.id;
+        info(tg_id);
+    }, 10000);
 };
 
 
@@ -287,7 +286,7 @@ function place_coef() {
 
 
 
-
+/*
 function place_init_user_info() {
     // Получаем объект пользователя
     const user = window.Telegram.WebApp.WebappInitData.user;
@@ -323,7 +322,7 @@ function place_init_user_info() {
 }
 
 
-
+*/
 
 
 
