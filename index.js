@@ -364,7 +364,6 @@ function info(tg_id) {
 
 
 
-// Функция для обновления всех блоков с играми
 function updateGames(last_game_list) {
     const blocks = document.querySelectorAll('.last-game');
     blocks.forEach((block, index) => {
@@ -382,11 +381,11 @@ function updateGames(last_game_list) {
         // Определение изображения в зависимости от игры и прибыли
         const imagePath = (game) => {
             if (game === 'dice') {
-                return Profit >= 3.7 ? 'assets/dice-sup-plate.svg' : 'assets/dice-def-plate.svg';
+                return Profit >= 3.7 ? 'assets/dice-sup-plate.png' : 'assets/dice-def-plate.png';
             } else if (game === 'darts') {
-                return Profit >= 3.7 ? 'assets/darts-sup-plate.svg' : 'assets/darts-def-plate.svg';
+                return Profit >= 3.7 ? 'assets/darts-sup-plate.png' : 'assets/darts-def-plate.png';
             } else if (game === 'slot') {
-                return Profit >= 3.7 ? 'assets/slot-sup-plate.svg' : 'assets/slot-def-plate.svg';
+                return Profit >= 3.7 ? 'assets/slot-sup-plate.png' : 'assets/slot-def-plate.png';
             }
             return ''; // Возвращаем пустую строку, если игра не распознана
         };
