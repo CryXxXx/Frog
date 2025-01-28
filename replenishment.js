@@ -73,7 +73,7 @@ function openWinthdraw() {
                                 }, 2000);
                             }
                         });
-                    }, 1500);
+                    }, 0);
                 }, 0);
             } else if (data.url === "no_money") {
                 if (isAnimating) return;
@@ -110,7 +110,7 @@ function openWinthdraw() {
                                 }, 2000);
                             }
                         });
-                    }, 1500);
+                    }, 0);
                 }, 0);
             }else {
                 window.Telegram.WebApp.openTelegramLink(data.url);
@@ -151,7 +151,7 @@ function openWinthdraw() {
                             }, 2000);
                         }
                     });
-                }, 1500);
+                }, 0);
             }, 0);
         });
 }
