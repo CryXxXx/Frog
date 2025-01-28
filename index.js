@@ -379,11 +379,11 @@ function info(tg_id) {
         return response.json(); // Преобразуем ответ в JSON
     })
     .then(data => {
-        let newValue = data.newValue; // Замените на реальное поле из вашего ответа
-        const element = document.getElementById('yourElementId'); // Замените на ID вашего элемента
+        let newValue = data.balance;
+        const UserBal = document.getElementById('balance');
 
-        if (element.innerText !== newValue) {
-            element.innerText = newValue; // Обновляем текст элемента
+        if (UserBal.innerText !== newValue) {
+            UserBal.innerText = newValue;
         }
     })
     .catch((error) => {
