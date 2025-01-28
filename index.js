@@ -43,12 +43,11 @@ const SlotLogo = document.getElementById('slot-logo')
 
 
 window.addEventListener('load', () => {
-    loader.classList.remove('off');
     anime({
         targets: '.loader',
         opacity: [1, 0],
-        duration: 800,
-        delay: 1000,
+        duration: 1000,
+        delay: 800,
         easing: 'easeInOutExpo',
         complete: () => {
           loader.classList.add('off');
