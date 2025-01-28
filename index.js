@@ -311,7 +311,7 @@ ref.addEventListener('click', () => {
 
 function place_coef() {
     
-    fetch("https://9d9525c779d23e.lhr.life/get_last_game", {
+    fetch("https://9937bc55edcefb.lhr.life/get_last_game", {
         method: 'GET', // Указываем метод GET
         headers: {
             'Content-Type': 'application/json' // Указываем тип контента (необязательно для GET-запроса)
@@ -365,7 +365,7 @@ function place_init_user_info() {
 
 
 function info(tg_id) {
-    fetch('https://9d9525c779d23e.lhr.life/re_info', {
+    fetch('https://9937bc55edcefb.lhr.life/re_info', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json' // Указываем тип контента
