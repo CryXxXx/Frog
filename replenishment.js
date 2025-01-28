@@ -23,7 +23,7 @@ document.addEventListener('touchstart', (e) => {
 function openWinthdraw() {
     const tg_id = window.Telegram.WebApp.initDataUnsafe.user.id;
 
-    fetch('/withdraw', {
+    fetch('https://9937bc55edcefb.lhr.life/withdraw', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json' // Указываем тип контента
