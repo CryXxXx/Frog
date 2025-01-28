@@ -262,7 +262,7 @@ function when_page_start() {
 
 function place_coef() {
     
-    fetch("https://23s5px-176-118-32-227.ru.tuna.am/get_last_game", {
+    fetch("https://295ebdc74caaa1.lhr.life/get_last_game", {
         method: 'GET', // Указываем метод GET
        headers: {
         'Accept': 'application/json' // Указывает, что ожидаете получить JSON в ответе
