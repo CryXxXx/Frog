@@ -419,7 +419,7 @@ function handleServerResponse(result) {
     const randomIndex = Math.floor(Math.random() * selectedValues.length);
     const randomValue = selectedValues[randomIndex];
 
-    const newImageSrc = `assets/dice-apng-${randomValue}.png`;
+    const newImageSrc = `assets/darts-apng-${randomValue}.png`;
     const newImage = new Image(); // Создаем новый объект Image
     newImage.src = newImageSrc; // Устанавливаем путь к новому изображению
 
