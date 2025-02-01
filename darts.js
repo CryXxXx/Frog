@@ -372,7 +372,7 @@ function handleBetButtonClick() {
                 const coef = calculateCoef();
                 const betNumber = values[currentValueIndex].replace(',', '.');
 
-                fetch('https://01245a322abb79.lhr.life/darts', {
+                fetch('https://273bc3246dfc19.lhr.life/darts', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
