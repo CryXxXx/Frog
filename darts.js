@@ -176,7 +176,7 @@ function info(tg_id) {
         
         const formattedValue = newValue.replace('.', ','); 
 
-        const UserBal = document.getElementById('balance');
+        const UserBal = document.getElementById('user-balance');
         UserBal.innerText = formattedValue;
 
     })
