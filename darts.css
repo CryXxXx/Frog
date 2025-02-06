@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+body {
+    background-color: #0F0F0F;
+    margin-left: 3.75vw;
+    margin-right: 3.75vw;
+    margin-top: 8vw;
+    margin-bottom: 12vw;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+/* Отключение выделения текста */
+* {
+    -webkit-user-select: none; /* Для браузеров на основе WebKit (Safari, Chrome) */
+    -moz-user-select: none;    /* Для Firefox */
+    -ms-user-select: none;     /* Для Internet Explorer/Edge */
+    user-select: none;         /* Для современных браузеров */
+    -webkit-touch-callout: none; /* Отключение вызова меню при долгом нажатии на мобильных устройствах */
+}
+
+/* Отключение перетаскивания */
+* {
+    -webkit-user-drag: none; /* Отключает перетаскивание для браузеров на основе WebKit */
+    user-drag: none;         /* Отключает перетаскивание для других браузеров */
+}
+
+
+
+
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0F0F0F;
+    opacity: 1;
+    z-index: 500;
+    display: block;
+}
+
+.loader.off {
+    display: none;
+}
+  
+.darts-logo-cont {
+    position: fixed;
+    aspect-ratio: 1 / 1;
+    width: 18.75vw;
+    opacity: 1;
+    z-index: 500;
+    display: block;
+    left: 40.58vw;
+    top: calc(50vh - 9.375vw);
+}
+
+.darts-logo-cont.off {
+    display: none;
+}
+
+.game-logo {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#apng-container {
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    width: 83vw;
+    left: 8.5vw;
+    top: calc(40vh - 60vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Стили для изображения */
+#myAPNG {
+    width: 100%; /* Автоматическая ширина */
+    aspect-ratio: 1 / 1;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.back-lobby-cont {
+    aspect-ratio: 2 / 3;
+    position: absolute;
+    width: 2.5vw;
+    left: 5.83vw;
+    top: 9.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.back-lobby-arrow {
+    aspect-ratio: 2 / 3;
+    height: 100%;
+    position: relative;
+}
+
+.balance-bar {
+    aspect-ratio: 290 / 84;
+    height: 7vw;
+    background-color: #212121;
+    border-radius: 10vw;
+    position: absolute;
+    align-items: center;
+    display: flex;
+    right: 3.75vw;
+    z-index: 10;
+}
+
+.tether-purple {
+    aspect-ratio: 1 / 1;
+    height: 6vw;
+    left: 0.6vw;
+    position: absolute;
+}
+
+.user-balance-cont {
+    width: 14.59vw;
+    height: 5vw;
+    right: 2.25vw;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-balance {
+    font-family: 'Roboto';
+    font-size: 4vw;
+    font-weight: 500;
+    color: #a1a1a1;
+}   
+
+
+
+/*                                                 */
+/*                       MENU                      */
+/*                                                 */
+
+
+
+.bet-menu-cont {
+    position: absolute;
+    width: 92.5vw;
+    aspect-ratio: 111 / 74;
+    bottom: calc(3vh + 18.75vw);
+}
+
+
+.bet-choosing-cont {
+    width: 92.5vw;
+    aspect-ratio: 111 / 9;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bet-amount-cont {
+    width: 92.5vw;
+    aspect-ratio: 111 / 9;
+    position: absolute;
+    left: 0%;
+    bottom: 18.75vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bet-action {
+    aspect-ratio: 111 / 9;
+    width: 100%;
+    position: relative;
+}
+
+.choosing-cont {
+    aspect-ratio: 1110 / 264;
+    width: 92.5vw;
+    position: absolute;
+    top: 9.58vw;
+    left: 0%;
+}
+
+.option {
+    aspect-ratio: 540 / 114;
+    height: 9.5vw;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0F0F0F;
+}
+
+.option.red {
+    left: 0%;
+    top: 0%;
+}
+
+.option.white {
+    right: 0%;
+    top: 0%;
+}
+
+.option.center {
+    left: 0%;
+    bottom: 0%;
+}
+
+.option.miss {
+    right: 0%;
+    bottom: 0%;
+}
+
+.option img {
+    position: absolute;
+    aspect-ratio: 540 / 114;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease;
+}
+
+.option .def {
+    z-index: 1; /* Передний план */
+}
+
+.option .sup {
+    z-index: 0; /* Задний план */
+}
+
+
+
+
+/*                                                   */
+/*                       SLIDER                      */
+/*                                                   */
+
+
+
+
+.bet-chooser {
+    aspect-ratio: 111 / 20;
+    width: 92.5vw;
+    bottom: 0%;
+    left: 0%;
+    position: absolute;
+}
+
+.bet-amount-body {
+    aspect-ratio: 111 / 20;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    position: absolute;
+}
+
+.slider-container {
+    position: absolute;
+    width: 83vw; /* Можно настроить ширину под ваши нужды */
+    height: 3.33vw; /* Высота контейнера 3.33vw */
+    background-color: #d3d3d3; /* Светло-серый цвет для контейнера */
+    top: 10vw;
+    left: 4.75vw;
+}
+
+.line {
+    position: absolute;
+    background-color: #A1A1A1;
+    height: 2vw; /* Высота линии 2vw */
+    width: 100%;
+    top: 50%; /* Центрирование линии */
+    transform: translateY(-50%); /* Центрирование линии */
+}
+
+.filled {
+    position: absolute;
+    background-color: #7666C4;
+    height: 2vw; /* Высота заполненной области 2vw */
+    top: 50%; /* Центрирование заполненной области */
+    transform: translateY(-50%); /* Центрирование заполненной области */
+}
+
+.moving-circle {
+    position: absolute;
+    width: 2.33vw;
+    height: 2.33vw;
+    background-color: #7666C4;
+    border: 0.5vw solid #212121;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: left 0.1s;
+    top: 50%; /* Центрирование круга */
+    transform: translate(-0.916vw, -50%);
+    z-index: 10;
+
+
+    touch-action: none; /* Предотвращает любые действия при касании */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Убирает эффект выделения при касании */
+}
+
+
+.moving-circle::before {
+    content: "";
+    position: absolute;
+    top: -2vw;
+    left: -2vw;
+    width: 6.33vw;
+    height: 6.33vw;
+    border-radius: 50%;
+    background-color: rgba(118, 102, 196, 0);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    z-index: -1;
+    transform: scale(0.2);
+}
+
+
+.moving-circle.dragging::before {
+    background-color: rgba(118, 102, 196, 0.4);
+    transform: scale(0.75);
+}
+
+.bet-number-cont {
+    position: absolute;
+    left: 4.75vw;
+    top: 2.9vw;
+    height: 5vw;
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 1.3vw;
+}
+
+.bet-number {
+    position: relative;
+    font-size: 4.16vw;
+    font-family: 'Roboto';
+    color: #f0f0f0;
+    font-weight: 500;
+}
+
+.bet-tether-cont {
+    position: relative;
+    aspect-ratio: 50 / 44;
+    width: 4.16vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bet-tether {
+    height: 100%;
+    aspect-ratio: 50 / 44;
+    position: relative;
+}
+
+.edit-circle-cont {
+    position: absolute;
+    aspect-ratio: 1 / 1;
+    height: 6vw;
+    top: 2.5vw;
+    right: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bet-plus {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ширина перекрывающего элемента */
+    height: 100%; /* Высота перекрывающего элемента */
+    z-index: 5; /* Убедитесь, что он выше остальных элементов */
+}
+
+
+
+
+/*                                                          */
+/*                          BET N' STUFF                    */
+/*                                                          */
+
+
+
+
+.bet-button {
+    aspect-ratio: 111 / 15;
+    width: 92.5vw;
+    position: absolute;
+    bottom: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bet-button img {
+    position: absolute;
+    aspect-ratio: 111 / 15;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease;
+}
+
+.black-block {
+    position: absolute;
+    height: calc(3vh + 12.5vw);
+    width: 100vw;
+    bottom: 0%;
+    left: 0%;
+    background-color: #0F0F0F;
+}
+
+.error-cont {
+    aspect-ratio: 112 / 12;
+    height: 10vw;
+    bottom: 6.5vw;
+    position: fixed;
+    left: 3.333%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.error-window {
+    aspect-ratio: 112 / 12;
+    width: 100%;
+    position: relative;
+}
+
+.error-dep-cont {
+    aspect-ratio: 112 / 12;
+    height: 10vw;
+    top: 6.5vw;
+    position: fixed;
+    left: 3.333%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+
+/*                                                        */
+/*                      ENTER AMOUNT                      */
+/*                                                        */
+
+.enter-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0F0F0F;
+    opacity: 0;
+    display: none;
+    z-index: 10;
+}
+
+.enter-window.on {
+    display: block;
+}
+
+
+
+
+.enter-cont {
+    position: absolute;
+    top: 0vw;
+    left: 0vw;
+    aspect-ratio: 1200 / 735;
+    width: 100vw;
+    z-index: 10;
+    justify-content: center;
+    display: flex;
+    opacity: 0;
+}
+
+.grey-cont {
+    display: none;
+}
+
+.grey-cont.on {
+    display: block;
+}
+
+.gray-enter-element {
+    position: absolute;
+    top: 0vw;
+    left: 0vw;
+    aspect-ratio: 1200 / 735;
+    width: 100vw;
+    border-radius: 0 0 3.75vw 3.75vw;
+    background-color: #212121;
+    transform: translateY(-15vw);
+}
+
+
+
+
+.enter-amount-cont {
+    position: relative;
+    top: 30.66vw;
+    height: 7.33vw;
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 2.1vw;
+}
+
+.amount-tether-cont {
+    position: relative;
+    aspect-ratio: 50 / 44;
+    width: 6.1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.amount-tether {
+    height: 100%;
+    aspect-ratio: 50 / 44;
+    position: relative;
+}
+
+.amount-text {
+    font-family: 'Roboto';
+    font-size: 6.25vw;
+    font-weight: 500;
+    color: #696969;
+    position: relative;
+}
+
+
+
+
+.back-circle {
+    aspect-ratio: 1 / 1;
+    width: 300%;
+    background-color: #292929;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-46.5%, -50%);
+    opacity: 0;
+}
+
+.back-enter-cont {
+    aspect-ratio: 2 / 3;
+    position: absolute;
+    width: 2.5vw;
+    left: 5.83vw;
+    top: 9.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.back-game {
+    display: none;
+}
+
+.back-game.on {
+    display: block;
+}
